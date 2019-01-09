@@ -1,0 +1,185 @@
+html, body {
+  margin: 0;
+}
+
+h1, h2, a {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 940px;<!DOCTYPE html>
+<html>
+<head >
+<link rel="stylesheet" href="apjstyle.css"/>
+<link rel="stylesheet" href="style.css"/>
+<!--<link rel="stylesheet" href="apjstyle_card.css"/>-->
+<link rel="stylesheet" href="style1.css"/>
+</head>
+<body >
+<div align="center">
+<h1>APEEJAY STYA University</h1>
+<h2><strong>Attendance of ETCS210 6th sem students<h2>
+<input id="gettext">
+<button type="button" onclick="loadDoc()">Search</button>
+<p id="demo">Enter the Enrolment no in the above search box</p>
+</div>
+
+<script>
+
+function loadDoc() {
+  var txt=document.getElementById("gettext").value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "assp.php?d="+txt, true);
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) {
+      document.getElementById("demo").innerHTML =this.responseText;
+    }
+  };
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>*
+
+  margin: 0 auto;
+}
+
+/* Main */
+.main {
+  text-align: center;
+  background: url("https://s3.amazonaws.com/codecademy-content/projects/move/bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+
+.main .container {
+  position: relative;
+  top: 100px;
+}
+
+.main h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 150px;
+}
+
+.main p {
+  color: #fff;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}
+
+.main .btn {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Supporting */
+.supporting {
+  background-color: #1c1c1c;
+  padding: 50px 0 80px;
+  text-align: center;
+}
+
+.supporting .col {
+  float: left;
+  padding: 10px;
+  width: 28%;
+}
+
+.supporting h2 {
+  color: #ffa800;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.supporting p {
+  color: #efefef;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.supporting .btn {
+  background-color: #eee;
+  color: #1c1c1c;
+  font-size: 18px;
+  padding: 8px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Feature */
+.feature {
+  background: url("https://s3.amazonaws.com/codecademy-content/projects/move/feature.jpg") no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
+}
+
+.feature .container {
+  position: relative;
+  top: 200px;
+}
+
+.feature h2 {
+  color: #fff;
+  font-size: 40px;
+  margin:0;
+  padding:50px 0 0;
+}
+
+/* Footer */
+.footer {
+  background: url("https://s3.amazonaws.com/codecademy-content/projects/move/footer.jpg") no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
+}
+
+.footer .container {
+  position: relative;
+  top: 200px;
+}
+
+.footer h2 {
+  color: #fff;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  padding:50px 0 0;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+
+.footer .btn {
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 30px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background:#ffa800;
+  color:#000;
+}
