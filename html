@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head >
+<link rel="stylesheet" href="apjstyle.css"/>
+<link rel="stylesheet" href="style.css"/>
+<!--<link rel="stylesheet" href="apjstyle_card.css"/>-->
+<link rel="stylesheet" href="style1.css"/>
+</head>
+<body >
+<div align="center">
+<h1>APEEJAY STYA University</h1>
+<h2><strong>Attendance of ETCS210 6th sem students<h2>
+<input id="gettext">
+<button type="button" onclick="loadDoc()">Search</button>
+<p id="demo">Enter the Enrolment no in the above search box</p>
+</div>
+
+<script>
+
+function loadDoc() {
+  var txt=document.getElementById("gettext").value;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "assp.php?d="+txt, true);
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) {
+      document.getElementById("demo").innerHTML =this.responseText;
+    }
+  };
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>*
